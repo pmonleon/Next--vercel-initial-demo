@@ -1,0 +1,25 @@
+FROM node:16-alpine
+
+RUN mkdir -p /app
+
+WORKDIR /app
+
+COPY package.json /app
+
+RUN yarn install
+
+COPY . /app
+
+RUN yarn build
+
+#  USER nextjs
+
+# puerto
+EXPOSE 3000
+
+# ejecutar la app
+CMD ["yarn", "start"]
+
+
+
+### Super pesada +1GB
