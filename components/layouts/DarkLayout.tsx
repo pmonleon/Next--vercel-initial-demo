@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FC, ReactNode } from 'react'
 
-export const DarkLayout = ({children}) => {
+export const DarkLayout:FC<{ children?: ReactNode }> = ({ children } ) => {
   return (
     <div
     style={{

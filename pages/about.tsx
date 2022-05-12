@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {  ReactNode } from 'react';
 import Link from 'next/link';
 import { MainLayout } from '../components/layouts/MainLayout';
 import { DarkLayout } from '../components/layouts/DarkLayout';
+
 
 
 const AboutPage = () => {
@@ -24,7 +25,7 @@ const AboutPage = () => {
   )
 }
 
-AboutPage.getLayout = function getLayout( page ) {
+AboutPage.getLayout = function getLayout( page: ReactNode | JSX.Element[]) {
   return (
     <MainLayout>
       <DarkLayout>
